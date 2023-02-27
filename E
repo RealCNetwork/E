@@ -123,7 +123,7 @@ function CreateMain(title)
 					end
 				end
 				TabContainer.Visible = true
-				Tab.TextColor3 = Color3.new(255, 255, 0)
+				Tab.TextColor3 = Color3.new(255, 0, 0)
 				Tab.Arrow.TextColor3 = Color3.new(255, 255, 0)
 			else 
 				TabContainer.Visible = false
@@ -276,7 +276,7 @@ function CreateMain(title)
 						end
 					end
 					SideDrop.TextColor3 = Color3.new(255, 0, 0)
-					SideDrop.Arrow.TextColor3 = Color3.new(255, 0, 0)
+					SideDrop.Arrow.TextColor3 = Color3.new(, 255, 0)
 					DropContainer.Visible = true
 				end
 			end)
@@ -397,7 +397,7 @@ function CreateMain(title)
 				Button.Name = v
 				Button.Parent = SideDrop.DropContainer
 				Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-				Button.BackgroundTransparency = 1.000
+				Button.BackgroundTransparency = 0
 				Button.Size = UDim2.new(0, 193, 0, 24)
 				Button.Font = Enum.Font.JosefinSans
 				Button.Text = " "..v
@@ -426,7 +426,7 @@ function CreateMain(title)
 			TextBox.Name = buttonText
 			TextBox.Parent = parent.TabContainer
 			TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-			TextBox.BackgroundTransparency = 1.000
+			TextBox.BackgroundTransparency = 0
 			TextBox.Size = UDim2.new(0, 193, 0, 24)
 			TextBox.Font = Enum.Font.JosefinSans
 			TextBox.Text = " "..buttonText
@@ -434,7 +434,7 @@ function CreateMain(title)
 			TextBox.TextSize = 14.000
 			TextBox.TextXAlignment = Enum.TextXAlignment.Left
 			TextBox.MouseButton1Down:Connect(function()
-				TextBox.TextColor3 = Color3.new(0, 255, 0)
+				TextBox.TextColor3 = Color3.new(255, 0, 0)
 				wait(0.05)
 				TextBox.TextColor3 = Color3.new(255, 255, 255)
 				callback(Box.Text)
@@ -456,7 +456,7 @@ function CreateMain(title)
 			Side.Name = "Side"
 			Side.Parent = TextBox
 			Side.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-			Side.BackgroundTransparency = 0.500
+			Side.BackgroundTransparency = 0
 			Side.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Side.BorderSizePixel = 4
 			Side.Position = UDim2.new(1.08290148, 0, 0, 0)
@@ -472,7 +472,7 @@ function CreateMain(title)
 			Hover.Name = "Hover"
 			Hover.Parent = TextBox
 			Hover.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			Hover.BackgroundTransparency = 1.000
+			Hover.BackgroundTransparency = 1
 			Hover.Size = UDim2.new(0, 209, 0, 32)
 			Hover.MouseEnter:Connect(function()
 				local allTabs = game.CoreGui[tostring(title)].Top.Container:GetDescendants()
